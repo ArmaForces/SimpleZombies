@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFM">
+    <Package name="Main">
+        <Key ID="STR_AFSZ_Main_Attributes">
+            <English>ArmaForces Simple Zombies Attributes</English>
+            <Polish>Atrybuty ArmaForces Simple Zombies</Polish>
+        </Key>
+        <Key ID="STR_AFSZ_Main_Category">
+            <English>ArmaForces</English>
+        </Key>
+    </Package>
+</Project>

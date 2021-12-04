@@ -1,0 +1,38 @@
+name = "ArmaForces - Simple Zombies"
+prefix = "afsz"
+author = "ArmaForces"
+files = [
+    "LICENSE",
+    "mod.cpp",
+    "README.md",
+]
+
+exclude = ["*.psd", "*.png", "*.tga"]
+
+modname = "armaforces_simple_zombies"
+key_name = "armaforces_simple_zombies_{{version}}"
+authority = "armaforces_simple_zombies_{{version}}"
+
+releasebuild = [
+    "!set_version",
+    "@zip",
+    "!publish"
+]
+
+[header_exts]
+version = "{{git \"id 8\"}}"
+
+[scripts.set_version]
+    steps_windows = [
+        "powershell ./tools/Set-Version.ps1 {{version}} '@armaforces_simple_zombies'"
+    ]
+    steps_linux = [
+        "sed -i 's/0.0.0/{{version}}/' ./releases/{{version}}/@armaforces_simple_zombies/mod.cpp"
+    ]
+    # show_output = true
+
+[scripts.publish]
+    steps_windows = [
+        "powershell ./tools/Publish.ps1 {{version}} 00000000 '@armaforces_simple_zombies'"
+    ]
+    show_output = true
