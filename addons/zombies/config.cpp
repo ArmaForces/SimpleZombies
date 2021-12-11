@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_common"
+            "afsz_zombie_ai"
         };
         author = "ArmaForces";
         authors[] = {"veteran29"};
@@ -15,5 +15,5 @@ class CfgPatches {
     };
 };
 
-#include "CfgEden.hpp"
-#include "CfgModuleCategories.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
