@@ -16,6 +16,9 @@
  * Public: Yes
  */
 
+#define DAMAGE_LIMBS 0.35
+#define DAMAGE_LIMBS_TORSO 0.45
+
 params [
     ["_position", nil, [[]]],
     ["_class", "", [""]]
@@ -56,7 +59,7 @@ _zombie allowSprint true;
 _zombie enableStamina false;
 _zombie forceSpeed 2;
 
-_zombie setDamage 0.45;
+_zombie setDamage selectRandom [DAMAGE_LIMBS, DAMAGE_LIMBS_TORSO];
 
 private _anim = GVAR(zombieAnimMap) getOrDefault [typeOf _zombie, "babe_rvg_zed_stand_zombie_walker"];
 // TODO disabled temporarily
