@@ -16,7 +16,7 @@ class GVAR(Statemachine) {
         };
     };
     class Chasing {
-        onState = QFUNC(chase_onState);
+        onState = QFUNC(sm_chase_onState);
 
         class Death {
             targetState = "Dead";
@@ -32,7 +32,7 @@ class GVAR(Statemachine) {
         };
     };
     class Attacking {
-        onStateEntered = QFUNC(attack_onStateEntered);
+        onStateEntered = QFUNC(sm_attack_onStateEntered);
 
         class Death {
             targetState = "Dead";

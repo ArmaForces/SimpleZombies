@@ -41,7 +41,7 @@ _zombie setVariable ["BIS_enableRandomization", false];
 // disable unwanted AI features
 _zombie disableAI "ALL";
 {
-    _zombie enableAI _x
+    _zombie enableAI _x;
 } forEach [
     "ANIM",
     "MOVE",
@@ -57,7 +57,7 @@ _zombie allowFleeing 0;
 
 _zombie allowSprint true;
 _zombie enableStamina false;
-_zombie forceSpeed 2;
+// _zombie forceSpeed 2;
 
 _zombie setDamage selectRandom [DAMAGE_LIMBS, DAMAGE_LIMBS_TORSO];
 

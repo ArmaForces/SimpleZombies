@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: <author>
+ * Author: veteran29
  * Function description
  *
  * Arguments:
@@ -16,3 +16,6 @@
  * Public: No
  */
 
+params ["_unit"];
+
+alive (_unit getVariable [QGVAR(victim), objNull]) // return
